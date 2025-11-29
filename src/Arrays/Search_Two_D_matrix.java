@@ -12,26 +12,24 @@ public class Search_Two_D_matrix {
       }
       System.out.println("enter the target: ");
           target=in.nextInt();
-        boolean result=  search_target(arr,target);
-        System.out.println(result);
+          boolean result=search_stair_case(arr,target);
+          System.out.println(result);
     }
-
-    public static boolean search_target(int[][] matrix,int target){
-        for(int i=0;i<matrix.length;i++){
-            int low=0;
-            int high=matrix[i].length-1;
-                while(low<=high){
-                    int mid=low+(high-low)/2;
-                    if(matrix[i][mid]==target){
-                        return true;
-                    } else if (matrix[i][mid]<target) {
-                        low=mid+1;
-                    }else{
-                        high=mid-1;
-                    }
-                }
+    public static boolean search_stair_case(int[][] arr,int target){// stair-case approach
+        int row=0;
+        int col=arr[row].length-1;
+        while(row<arr.length && col>=0){
+            if(arr[row][col]==target){
+                return true;
+            } else if (arr[row][col]<target) {
+                row++;
+            }else {
+                col--;
             }
-
+        }
         return false;
     }
 }
+
+
+
