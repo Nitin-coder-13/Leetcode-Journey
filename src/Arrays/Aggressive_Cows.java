@@ -15,6 +15,7 @@ public class Aggressive_Cows {
             Arrays.sort(stall);
             int result = min_distance(stall, noc);
             System.out.println(result);
+            t--;
         }
     }
     public static int min_distance(int[] stall,int noc){
