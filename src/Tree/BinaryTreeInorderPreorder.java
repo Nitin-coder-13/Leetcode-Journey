@@ -1,6 +1,6 @@
 package Tree;
 
-public class BinaryTreeInroderPreorder {
+public class BinaryTreeInorderPreorder {
     public class TreeNode {
         int val;
         TreeNode left;
